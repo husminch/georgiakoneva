@@ -1,98 +1,55 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+<!DOCTYPE html>
+<html lang="fr">
 
-body{
-background:#050505;
-color:white;
-font-family:'Inter',sans-serif;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-overflow:hidden;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georgia Koneva</title>
 
-.overlay{
-position:fixed;
-inset:0;
-background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75));
-z-index:-1;
-}
+    <link rel="stylesheet" href="style.css">
 
-header{
-text-align:center;
-padding:40px;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-.logo{
-width:120px;
-height:120px;
-border:2px solid #d6b17a;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-margin:auto;
-font-family:'Cormorant Garamond',serif;
-font-size:52px;
-color:#d6b17a;
-margin-bottom:30px;
-letter-spacing:2px;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
 
-h1{
-font-family:'Cormorant Garamond',serif;
-font-size:58px;
-font-weight:600;
-margin-bottom:40px;
-letter-spacing:4px;
-}
+<body>
 
-.buttons{
-display:flex;
-flex-direction:column;
-gap:18px;
-width:280px;
-margin:auto;
-}
+<div class="overlay"></div>
 
-.btn{
-text-decoration:none;
-color:white;
-border:1px solid #d6b17a;
-padding:18px;
-border-radius:50px;
-font-size:17px;
-letter-spacing:2px;
-transition:.35s;
-background:rgba(255,255,255,.03);
-backdrop-filter:blur(10px);
-}
+<div class="container">
 
-.btn:hover{
-background:#d6b17a;
-color:black;
-transform:translateY(-3px);
-box-shadow:0 0 25px rgba(214,177,122,.45);
-}
+<div class="logo">
+GK
+</div>
 
-@media(max-width:768px){
+<h1>Georgia Koneva</h1>
 
-h1{
-font-size:42px;
-}
+<p class="subtitle">Official Website</p>
 
-.logo{
-width:90px;
-height:90px;
-font-size:42px;
-}
+<div class="buttons">
 
-.buttons{
-width:100%;
-}
+<a class="btn" href="https://onlyfans.com/georgiakoneva" target="_blank">
+✨ OnlyFans
+</a>
 
-}
+<a class="btn" href="https://t.me/georgiakonevaoff" target="_blank">
+✈️ Telegram
+</a>
+
+<a class="btn" href="https://instagram.com/georgiakonevaoff" target="_blank">
+📸 Instagram
+</a>
+
+<a class="btn" href="https://snapchat.com/t/a7ppGJX7" target="_blank">
+👻 Snapchat
+</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
