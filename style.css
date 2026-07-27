@@ -319,8 +319,20 @@ h1{
 
     background:#FFFC00;
 
-    color:#000;
+    color:#fff;
 
+}
+.unlockt{
+
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #6d28d9
+    );
+
+    color:#fff;
+
+}
 }
 
 .btn span{
@@ -396,5 +408,36 @@ h1,
         font-size:26px;
 
     }
+
+}
+.contact{
+
+    margin-top:22px;
+    margin-bottom:25px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    color:rgba(255,255,255,.82);
+
+    text-shadow:
+    0 2px 8px rgba(0,0,0,.35);
+
+}
+
+.contact a{
+
+    color:#f4d8a2;
+
+    text-decoration:none;
+
+    transition:.25s;
+
+}
+
+.contact a:hover{
+
+    color:#fff;
 
 }
