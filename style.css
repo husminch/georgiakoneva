@@ -330,6 +330,19 @@ h1{
 }
 .unlockt{
 
+    background:#fff;
+
+}
+
+.unlockt img{
+
+    width:34px;
+    height:34px;
+
+    object-fit:contain;
+
+}
+
     background:linear-gradient(
         135deg,
         #8b5cf6,
