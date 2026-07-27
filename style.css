@@ -323,10 +323,20 @@ h1{
 
 .snapchat{
 
+    .snapchat{
+
     background:#FFFC00;
 
-    color:#fff;
+}
 
+.snapchat img{
+
+    width:34px;
+    height:34px;
+
+    object-fit:contain;
+
+}
 }
 .unlockt{
 
