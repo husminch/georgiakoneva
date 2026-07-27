@@ -107,7 +107,7 @@ h1{
     font-size:12px;
     letter-spacing:5px;
     color:rgba(255,255,255,.72);
-    margin-bottom:140px;
+    margin-bottom:170px;
 }
 .buttons{
     
@@ -248,9 +248,10 @@ h1{
     }
 
     .subtitle{
+
     font-size:11px;
     letter-spacing:4px;
-    margin-bottom:120px;
+    margin-bottom:150px;
     }
     
     .button{
