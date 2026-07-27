@@ -6,466 +6,250 @@
 
 html,
 body{
-
     width:100%;
     min-height:100%;
     overflow-x:hidden;
-    overflow-y:auto;
-
     font-family:"Inter",sans-serif;
-
     background:#000;
-
 }
 
 body{
-
     display:flex;
     justify-content:center;
-
 }
 
 .hero{
-
     position:relative;
-
     width:100%;
     min-height:100vh;
-
     overflow:hidden;
-
 }
 
 .hero-image{
-
     position:absolute;
     inset:0;
-
     width:100%;
     height:100%;
-
     object-fit:cover;
-    object-position:center;
-
-    filter:brightness(1.08) contrast(1.03);
-
+    object-position:center top;
 }
 
 .overlay{
-
     position:absolute;
     inset:0;
-
-    background:
-
-    radial-gradient(
-        ellipse at 50% 12%,
-        rgba(0,0,0,.18) 0%,
-        rgba(0,0,0,.10) 28%,
-        transparent 58%
-    ),
-
-    linear-gradient(
-
-        180deg,
-
-        rgba(0,0,0,.28) 0%,
-
-        rgba(0,0,0,.24) 10%,
-
-        rgba(0,0,0,.18) 22%,
-
-        rgba(0,0,0,.12) 36%,
-
-        rgba(0,0,0,.06) 55%,
-
-        rgba(0,0,0,.04) 72%,
-
-        rgba(0,0,0,.10) 88%,
-
-        rgba(0,0,0,.24) 100%
-
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.75)
     );
-
 }
 
 .content{
-
     position:relative;
-
     z-index:2;
-
     min-height:100vh;
-
     display:flex;
     flex-direction:column;
     align-items:center;
-
-    padding:18px 24px 40px;
-
+    justify-content:flex-start;
+    padding-top:60px;
+    padding-bottom:40px;
 }
 
 .logo{
-
-    width:96px;
-    height:96px;
-
-    margin-top:8px;
-    margin-bottom:10px;
-
+    width:95px;
+    height:95px;
     border-radius:50%;
-
+    border:2px solid rgba(255,255,255,.8);
     display:flex;
-    align-items:center;
     justify-content:center;
-
+    align-items:center;
+    color:#fff;
     font-family:"Cormorant Garamond",serif;
-    font-size:42px;
-    font-weight:700;
-
-    color:#f4d8a2;
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(245,217,164,.70);
-
-    backdrop-filter:blur(18px);
-
-    text-shadow:
-
-    0 0 8px rgba(255,236,190,.85),
-
-    0 0 18px rgba(245,217,164,.55);
-
-    box-shadow:
-
-    0 0 12px rgba(245,217,164,.22),
-
-    0 0 28px rgba(245,217,164,.15);
-
+    font-size:38px;
+    margin-bottom:24px;
+    backdrop-filter:blur(8px);
 }
 
 h1{
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:48px;
-
-    font-weight:700;
-
     color:#fff;
-
-    margin-bottom:2px;
-
-    text-shadow:
-
-    0 3px 10px rgba(0,0,0,.40),
-
-    0 10px 30px rgba(0,0,0,.25);
-
+    font-family:"Cormorant Garamond",serif;
+    font-size:52px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-align:center;
 }
 
 .subtitle{
-
-    font-size:12px;
-
-    letter-spacing:7px;
-
-    text-transform:uppercase;
-
-    color:rgba(255,255,255,.96);
-
-    margin-bottom:auto;
-
-    text-shadow:
-
-    0 2px 8px rgba(0,0,0,.35);
-
+    color:rgba(255,255,255,.85);
+    letter-spacing:6px;
+    font-size:13px;
+    margin-top:8px;
+    margin-bottom:85px;
 }
 
 .buttons{
-
-    width:100%;
-
+    width:min(430px,90%);
     display:flex;
     flex-direction:column;
-
-    gap:16px;
-
+    gap:14px;
     margin-top:120px;
-
 }
 
-}
-
-}
 .btn{
-
-    width:100%;
-    height:68px;
-
     display:flex;
     align-items:center;
-
-    padding:0 22px;
-
+    justify-content:space-between;
     text-decoration:none;
-
-    border-radius:24px;
-
-    background:rgba(255,255,255,.012);
-
-    backdrop-filter:blur(34px);
-    -webkit-backdrop-filter:blur(34px);
-
-    border:1.5px solid rgba(255,255,255,.28);
-
-    box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.14),
-    0 10px 30px rgba(0,0,0,.08);
-
-    transition:
-    transform .22s ease,
-    background .25s ease,
-    border-color .25s ease,
-    box-shadow .25s ease;
-
+    padding:14px 20px;
+    border-radius:18px;
+    backdrop-filter:blur(20px);
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.18);
+    transition:.25s;
 }
 
 .btn:hover{
-
-    background:rgba(255,255,255,.025);
-
-    border-color:rgba(245,217,164,.45);
-
-    box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.20),
-    0 14px 35px rgba(0,0,0,.10);
-
-}
-
-.btn:active{
-
-    transform:scale(.975);
-
-    background:rgba(255,255,255,.035);
-
-    border-color:rgba(245,217,164,.60);
-
-    box-shadow:
-    0 0 18px rgba(245,217,164,.45);
-
+    transform:translateY(-2px);
+    background:rgba(255,255,255,.18);
 }
 
 .left{
-
     display:flex;
     align-items:center;
-
-    gap:18px;
-
-}
-
-.icon{
-
-    width:50px;
-    height:50px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:18px;
-
-    background:rgba(255,255,255,.08);
-
-    backdrop-filter:blur(14px);
-
-    font-size:28px;
-
-}
-
-.onlyfans{
-
-    background:#fff;
-
-}
-
-.onlyfans img{
-
-    width:34px;
-    height:34px;
-
-    object-fit:contain;
-
-}
-
-.telegram{
-
-    color:#27A7E7;
-
-}
-
-.instagram{
-
-    background:linear-gradient(
-        135deg,
-        #F58529,
-        #FEDA77,
-        #DD2A7B,
-        #8134AF,
-        #515BD4
-    );
-
-    color:#fff;
-
-}
-
-.snapchat{
-
-    .snapchat{
-
-    background:#FFFC00;
-
-}
-
-.snapchat img{
-
-    width:34px;
-    height:34px;
-
-    object-fit:contain;
-
-}
-}
-.unlockt{
-
-    background:#fff;
-
-}
-
-.unlockt img{
-
-    width:34px;
-    height:34px;
-
-    object-fit:contain;
-
-}
-
-    background:linear-gradient(
-        135deg,
-        #8b5cf6,
-        #6d28d9
-    );
-
-    color:#fff;
-
-}
+    gap:16px;
 }
 
 .btn span{
-
     color:#fff;
-
-    font-size:18px;
-
+    font-size:16px;
     font-weight:500;
-
-    letter-spacing:.2px;
-
-    text-shadow:
-    0 2px 8px rgba(0,0,0,.28);
-
 }
 
-.logo,
-h1,
-.subtitle,
-.buttons{
-
-    animation:fadeUp .8s ease;
-
+.icon{
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:22px;
 }
 
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-        transform:translateY(30px);
-
-    }
-
-    to{
-
-        opacity:1;
-        transform:translateY(0);
-
-    }
-
+.icon img{
+    width:24px;
+    height:24px;
+    object-fit:contain;
+}
+.instagram{
+    background:linear-gradient(135deg,#f9ce34,#ee2a7b,#6228d7);
 }
 
-@media (max-width:390px){
-
-    .logo{
-
-        width:88px;
-        height:88px;
-
-        font-size:38px;
-
-    }
-
-    h1{
-
-        font-size:42px;
-
-    }
-
-    .btn{
-
-        height:72px;
-
-    }
-
-    .icon{
-
-        width:52px;
-        height:52px;
-
-        font-size:26px;
-
-    }
-
+.snapchat{
+    background:#FFFC00;
+    color:#ffffff;
 }
-..contact{
 
-    margin-top:28px;
-    margin-bottom:18px;
+.onlyfans{
+    background:#00AEEF;
+}
 
+.unlockt{
+    background:#1b1b1b;
+}
+
+.telegram{
+    background:#27A7E7;
+}
+
+.contact{
+    margin-top:32px;
     text-align:center;
-
-    font-size:13px;
-
-    font-weight:400;
-
-    color:rgba(0,0,0,.45);
-
+    font-size:12px;
+    color:rgba(255,255,255,.45);
 }
 
 .contact a{
-
-    color:rgba(0,0,0,.45);
-
+    color:rgba(255,255,255,.45);
     text-decoration:none;
-
     transition:.25s;
-
 }
 
 .contact a:hover{
+    color:#ffffff;
+}
 
-    color:rgba(0,0,0,.75);
+@media (max-width:768px){
+
+    .content{
+        padding-top:40px;
+    }
+
+    .logo{
+        width:82px;
+        height:82px;
+        font-size:32px;
+        margin-bottom:20px;
+    }
+
+    h1{
+        font-size:40px;
+        padding:0 20px;
+    }
+
+    .subtitle{
+        font-size:11px;
+        letter-spacing:4px;
+        margin-bottom:60px;
+    }
+
+    .buttons{
+        width:90%;
+        margin-top:90px;
+        gap:12px;
+    }
+
+    .btn{
+        padding:13px 18px;
+        border-radius:16px;
+    }
+
+    .icon{
+        width:42px;
+        height:42px;
+        font-size:20px;
+    }
+
+    .icon img{
+        width:22px;
+        height:22px;
+    }
+
+    .btn span{
+        font-size:15px;
+    }
+
+    .contact{
+        margin-top:26px;
+        font-size:11px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    h1{
+        font-size:34px;
+    }
+
+    .subtitle{
+        letter-spacing:3px;
+    }
+
+    .buttons{
+        width:92%;
+    }
 
 }
