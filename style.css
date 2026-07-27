@@ -6,441 +6,236 @@
 
 html,
 body{
-
     width:100%;
     min-height:100%;
     overflow-x:hidden;
-    overflow-y:auto;
-
     font-family:"Inter",sans-serif;
-
     background:#000;
-
+    color:#fff;
 }
 
 body{
-
-    display:flex;
-    justify-content:center;
-
-}
-
-.hero{
-
     position:relative;
-
-    width:100%;
-    min-height:100vh;
-
-    overflow:hidden;
-
 }
 
-.hero-image{
-
-    position:absolute;
+.background{
+    position:fixed;
     inset:0;
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-    object-position:center;
-
-    filter:brightness(1.08) contrast(1.03);
-
+    background:url("IMG_4944.jpeg") center center/cover no-repeat;
+    transform:scale(1.05);
+    z-index:-3;
 }
 
 .overlay{
-
-    position:absolute;
+    position:fixed;
     inset:0;
-
     background:
+        linear-gradient(to bottom,
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.18),
+        rgba(0,0,0,.68));
+    z-index:-2;
+}
 
-    radial-gradient(
-        ellipse at 50% 12%,
-        rgba(0,0,0,.18) 0%,
-        rgba(0,0,0,.10) 28%,
-        transparent 58%
-    ),
-
-    linear-gradient(
-
-        180deg,
-
-        rgba(0,0,0,.28) 0%,
-
-        rgba(0,0,0,.24) 10%,
-
-        rgba(0,0,0,.18) 22%,
-
-        rgba(0,0,0,.12) 36%,
-
-        rgba(0,0,0,.06) 55%,
-
-        rgba(0,0,0,.04) 72%,
-
-        rgba(0,0,0,.10) 88%,
-
-        rgba(0,0,0,.24) 100%
-
-    );
-
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
 }
 
 .content{
-
-    position:relative;
-
-    z-index:2;
-
-    min-height:100vh;
-
+    width:100%;
+    max-width:430px;
     display:flex;
     flex-direction:column;
     align-items:center;
-
-    padding:18px 24px 32px;
-
 }
 
 .logo{
-
-    width:96px;
-    height:96px;
-
-    margin-top:8px;
-    margin-bottom:10px;
-
+    width:90px;
+    height:90px;
     border-radius:50%;
-
     display:flex;
     align-items:center;
     justify-content:center;
+    margin-bottom:24px;
+    border:1px solid rgba(212,175,55,.45);
+    background:rgba(20,20,20,.35);
+    backdrop-filter:blur(18px);
+    box-shadow:
+    0 0 35px rgba(212,175,55,.18);
+}
 
+.logo span{
     font-family:"Cormorant Garamond",serif;
     font-size:42px;
     font-weight:700;
-
-    color:#f4d8a2;
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(245,217,164,.70);
-
-    backdrop-filter:blur(18px);
-
-    text-shadow:
-    0 0 8px rgba(255,236,190,.85),
-    0 0 18px rgba(245,217,164,.55);
-
-    box-shadow:
-    0 0 12px rgba(245,217,164,.22),
-    0 0 28px rgba(245,217,164,.15);
-
+    color:#d4af37;
+    letter-spacing:2px;
 }
 
 h1{
-
     font-family:"Cormorant Garamond",serif;
-
-    font-size:48px;
-
+    font-size:52px;
     font-weight:700;
-
-    color:#fff;
-
-    margin-bottom:2px;
-
-    text-shadow:
-    0 3px 10px rgba(0,0,0,.40),
-    0 10px 30px rgba(0,0,0,.25);
-
+    text-align:center;
+    margin-bottom:8px;
+    text-shadow:0 8px 30px rgba(0,0,0,.45);
 }
 
 .subtitle{
-
+    letter-spacing:5px;
     font-size:12px;
-
-    letter-spacing:7px;
-
-    text-transform:uppercase;
-
-    color:rgba(255,255,255,.96);
-
-    margin-bottom:120px;
-
-    text-shadow:
-    0 2px 8px rgba(0,0,0,.35);
-
+    color:rgba(255,255,255,.72);
+    margin-bottom:42px;
 }
-
 .buttons{
-
     width:100%;
-
     display:flex;
     flex-direction:column;
-
-    gap:14px;
-
-    margin-top:auto;
-
+    gap:16px;
 }
 
-.btn{
-
+.button{
     width:100%;
-    height:68px;
-
-    display:flex;
-    align-items:center;
-
-    padding:0 22px;
-
-    text-decoration:none;
-
-    border-radius:22px;
-
-    background:rgba(255,255,255,.012);
-
-    backdrop-filter:blur(34px);
-    -webkit-backdrop-filter:blur(34px);
-
-    border:1.5px solid rgba(255,255,255,.28);
-
-    box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.14),
-    0 10px 30px rgba(0,0,0,.08);
-
-    transition:
-    transform .22s ease,
-    background .25s ease,
-    border-color .25s ease,
-    box-shadow .25s ease;
-
-}
-
-.btn:hover{
-
-    transform:translateY(-2px);
-
-    background:rgba(255,255,255,.025);
-
-    border-color:rgba(245,217,164,.45);
-
-}
-.btn:active{
-
-    transform:scale(.98);
-
-    background:rgba(255,255,255,.035);
-
-    border-color:rgba(245,217,164,.60);
-
-    box-shadow:
-    0 0 18px rgba(245,217,164,.45);
-
-}
-
-.left{
-
-    display:flex;
-    align-items:center;
-
-    gap:18px;
-
-}
-
-.icon{
-
-    width:50px;
-    height:50px;
-
+    height:66px;
     display:flex;
     align-items:center;
     justify-content:center;
-
-    border-radius:16px;
-
-    background:rgba(255,255,255,.08);
-
-    backdrop-filter:blur(14px);
-
-    font-size:24px;
-
-    flex-shrink:0;
-
-}
-
-.onlyfans{
-
-    background:#fff;
-
-}
-
-.onlyfans img{
-
-    width:30px;
-    height:30px;
-
-    object-fit:contain;
-
-}
-
-.telegram{
-
-    color:#27A7E7;
-
-}
-
-.instagram{
-
-    background:linear-gradient(
-        135deg,
-        #F58529,
-        #FEDA77,
-        #DD2A7B,
-        #8134AF,
-        #515BD4
-    );
-
+    gap:14px;
+    text-decoration:none;
     color:#fff;
-
-}
-
-.snapchat{
-
-    background:#FFFC00;
-    color:#ffffff;
-
-}
-
-.unlockt{
-
-    background:#1c1c1c;
-    color:#ffffff;
-
-}
-
-.btn span{
-
-    color:#fff;
-
-    font-size:18px;
-
+    font-size:17px;
     font-weight:500;
-
-    letter-spacing:.2px;
-
-    text-shadow:
-    0 2px 8px rgba(0,0,0,.28);
-
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(24px);
+    -webkit-backdrop-filter:blur(24px);
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.28),
+        inset 0 1px 0 rgba(255,255,255,.18);
+    transition:.35s ease;
 }
 
-.contact{
+.button:hover{
+    transform:translateY(-4px);
+    background:rgba(255,255,255,.16);
+    border-color:rgba(212,175,55,.45);
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.38),
+        0 0 18px rgba(212,175,55,.18);
+}
 
-    margin-top:26px;
-
-    font-size:11px;
-
-    color: rgba(255,255,255,.65);
-
+.button i{
+    font-size:24px;
+    width:28px;
     text-align:center;
+}
 
+.button img{
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.button span{
+    letter-spacing:.4px;
+}
+
+.instagram i{
+    color:#ff5ea8;
+}
+
+.snapchat i{
+    color:#ffd400;
+}
+
+.shop i{
+    color:#d4af37;
+}
+
+.telegram i{
+    color:#2AABEE;
+    .contact{
+    margin-top:38px;
 }
 
 .contact a{
-
-    color:inherit;
-
     text-decoration:none;
-
+    color:rgba(255,255,255,.70);
+    font-size:14px;
+    letter-spacing:.4px;
+    transition:.3s;
 }
 
 .contact a:hover{
-
-    color:rgba(255,255,255,.75);
-
-}
-
-.logo,
-h1,
-.subtitle,
-.buttons{
-
-    animation:fadeUp .8s ease;
-
+    color:#fff;
 }
 
 @keyframes fadeUp{
 
     from{
-
         opacity:0;
         transform:translateY(30px);
-
     }
 
     to{
-
         opacity:1;
         transform:translateY(0);
-
     }
 
 }
 
-@media (max-width:390px){
+.content{
+    animation:fadeUp .9s ease;
+}
+
+@media(max-width:480px){
 
     .logo{
+        width:80px;
+        height:80px;
+    }
 
-        width:88px;
-        height:88px;
-
+    .logo span{
         font-size:38px;
-
     }
 
     h1{
-
-        font-size:42px;
-
+        font-size:44px;
     }
 
     .subtitle{
-
-        margin-bottom:90px;
-
+        font-size:11px;
+        letter-spacing:4px;
+        margin-bottom:36px;
     }
 
-    .btn{
-
-        height:64px;
-
-    }
-
-    .icon{
-
-        width:46px;
-        height:46px;
-
-        font-size:22px;
-
-    }
-
-    .onlyfans img{
-
-        width:28px;
-        height:28px;
-
-    }
-
-    .btn span{
-
+    .button{
+        height:62px;
         font-size:16px;
-
     }
 
+    .button i{
+        font-size:22px;
+    }
+
+    .button img{
+        width:24px;
+        height:24px;
+    }
+
+    .contact{
+        margin-top:32px;
+    }
+
+    .contact a{
+        font-size:13px;
+    }
+
+}
 }
